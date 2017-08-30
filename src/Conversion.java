@@ -1,4 +1,4 @@
-
+// Shashwat Sparsh P3
 public class Conversion 
 {
 	
@@ -33,23 +33,41 @@ public class Conversion
 	public static void calculateBMI()
 	{
 		int heightInch = 63, weightLbs = 125;
-		
+		int foot = 12;
+		int heightFeet;
 		double inchConversion = .0254, lbsConversion = .45;
 		
 		double heightMeter = heightInch * inchConversion;
 		double weightKg = weightLbs * lbsConversion;
 		heightMeter *= heightMeter;
+		
+		heightFeet = heightInch / foot;
+		heightInch = heightInch % 12;
 		double bmi = weightKg / heightMeter;
-		System.out.println("The BMI for a person who is " + heightInch + "\" " + "and weighs" + weightLbs + " lbs is " + bmi);		
+		//System.out.println(heightFeet);
+		//System.out.println(heightInch);
+		System.out.println("The BMI for a person who is " + heightFeet + "'" + heightInch + "\" " + "and weighs " + weightLbs + " lbs is " + bmi + "\n");		
 		
 		
 	}
 	
+	public static void area()
+	{
+		int length = 12, width = 10;
+		int feetToYard = 3;
+		int areaFeet = length * width;
+		
+		int lengthYard = length / feetToYard;
+		double widthYard = (double) width / feetToYard;
+		double areaYard = lengthYard * widthYard;
+		System.out.println("A " + width + "' " + length + "' room is " + areaFeet + "sq feet or " + areaYard + " square yards."); 
+	}
 	
 	public static void main(String[] args)
 	{
 		round();
 		convertInchesToFeetAndInches();
 		calculateBMI();
+		area();
 	}
 }
