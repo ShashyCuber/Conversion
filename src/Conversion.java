@@ -2,9 +2,8 @@
 public class Conversion 
 {
 	
-	public static void round()
+	public static void round(int num1, int num2)
 	{
-		double num1 = 2, num2 = 3;
 		double dividedNum = num1/num2;
 		double adjustedNum;
 		int roundedNum;
@@ -18,9 +17,8 @@ public class Conversion
 	}
 	
 	
-	public static void convertInchesToFeetAndInches()
+	public static void convertInchesToFeetAndInches(int originalInch)
 	{
-		int originalInch = 77;
 		int inchesInFeet = 12;
 		int newInch;
 		int feet = originalInch / inchesInFeet; 
@@ -30,9 +28,8 @@ public class Conversion
 		System.out.println(originalInch + "\"" + " is " + feet + "'" + newInch + "\"\n");
 	}
 	
-	public static void calculateBMI()
+	public static void calculateBMI( int heightInch, int weightLbs)
 	{
-		int heightInch = 63, weightLbs = 125;
 		int foot = 12;
 		int heightFeet;
 		double inchConversion = .0254, lbsConversion = .45;
@@ -51,9 +48,8 @@ public class Conversion
 		
 	}
 	
-	public static void area()
+	public static void area(int length, int width)
 	{
-		int length = 12, width = 10;
 		int feetToYard = 3;
 		int areaFeet = length * width;
 		
@@ -65,9 +61,9 @@ public class Conversion
 	
 	public static void main(String[] args)
 	{
-		round();
-		convertInchesToFeetAndInches();
-		calculateBMI();
-		area();
+		round(2, 3); //use 2 and 3
+		convertInchesToFeetAndInches(77); //use 77
+		calculateBMI(63, 125); // use 63, 125
+		area(12, 10); // use 12 and 10
 	}
 }
